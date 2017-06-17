@@ -1,21 +1,8 @@
-/*
-Umieść w swoim repozytorim teaching-jenkins:
- jenkins/tools/create_user.groovy
-*/
-
-/* 
-# create a user 
-docker exec -i -t jenkins-wsb /bin/bash
-
-cd /var/jenkins_home
-
 export ADMIN_USER=admin
 export ADMIN_PASSWORD=$(cat ./secrets/initialAdminPassword)
-
 export USER_NAME=monika
 export USER_PASS=secret
 export USER_DSC="Frontend inz"
-
 java -jar ./war/WEB-INF/jenkins-cli.jar -s http://127.0.0.1:8080/ groovy \
   --username ADMIN_USER --password ADMIN_PASSWORD \
   tools/create_user.groovy \
